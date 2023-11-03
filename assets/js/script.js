@@ -4,6 +4,7 @@ var question = document.querySelector("#question")
 var answers = document.querySelector("#answers")
 var currentQuestion = 0;
 var startQuiz = document.querySelector("#start-quiz");
+var correctAnswer = false;
 
 var holdQuestion = [
 {
@@ -56,15 +57,23 @@ function startGame(){
 function displayQuestion(questionIndex){
     question.textContent = holdQuestion[questionIndex].question;
     answers.innerHTML = "";
+    correctAnswer = false;
 
     for (var i = 0; i < holdQuestion[questionIndex].answers.length; i++) {
         var answerItem = document.createElement("li");
-        answerItem.textContent = holdQuestion[questionIndex].answers[i];
+        var answerText = holdQuestion[questionIndex].answers[i];
+        answerItem.textContent = answerText;
         answerItem.addEventListener("click", function () {
           // Handle user's answer selection
+          if (correctAnswer){
+            return;
+          }
+
           var selectedAnswer = this.textContent;
-          var correctAnswer = holdQuestion[questionIndex].correctAnswer;
-          if (selectedAnswer === correctAnswer) {
+          var rightAnswer = holdQuestion[questionIndex].correctAnswer;
+
+          if (selectedAnswer === rightAnswer) {
+            correctAnswer = true;
             feedback.textContent = "Correct!";
             // Handle correct answer
           } else {
@@ -73,17 +82,20 @@ function displayQuestion(questionIndex){
           }
 
           // Move to the next question
-          currentQuestion++;
-          if (currentQuestion < holdQuestion.length) {
+          if (correctAnswer && currentQuestion < holdQuestion.length) {
+            currentQuestion++;
             displayQuestion(currentQuestion);
-          } else {
+          } else if (correctAnswer && currentQuestion === holdQuestion.length - 1){
             feedback.textContent = "Quiz Is Over"
             // End the quiz as there are no more questions
           }
         });
-
+        
         answers.appendChild(answerItem);
       }
     }
+
+    var feedback = document.createElement("p");
+    document.body.appendChild(feedback);
 
     
