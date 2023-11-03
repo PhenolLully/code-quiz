@@ -79,6 +79,17 @@ function displayQuestion(questionIndex){
           } else {
             // Handle incorrect answer
             feedback.textContent = "Wrong!";
+
+            count -= 5;
+            if(count < 0){
+                count = 0;
+            }
+            timer.textContent = "Time: " + count;
+
+            if(count <= 0){
+                gameover();
+            }
+
           }
 
           // Move to the next question
