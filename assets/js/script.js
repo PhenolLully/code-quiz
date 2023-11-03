@@ -55,6 +55,10 @@ function startGame(){
 }
 
 function displayQuestion(questionIndex){
+    if (questionIndex >= holdQuestion.length){
+        gameover();
+        return;
+    }
     question.textContent = holdQuestion[questionIndex].question;
     answers.innerHTML = "";
     correctAnswer = false;
@@ -93,18 +97,20 @@ function displayQuestion(questionIndex){
           }
 
           // Move to the next question
-          if (correctAnswer && currentQuestion < holdQuestion.length) {
+          if (correctAnswer) {
             currentQuestion++;
-            displayQuestion(currentQuestion);
-          } else if (correctAnswer && currentQuestion === holdQuestion.length - 1){
-            feedback.textContent = "Quiz Is Over"
-            // End the quiz as there are no more questions
+            if (currentQuestion < holdQuestion.length) {
+              displayQuestion(currentQuestion);
+            } else {
+              feedback.textContent = "Quiz Is Over";
+              gameover();
+            }
           }
         });
         
         answers.appendChild(answerItem);
-      }
     }
+}
 
     var feedback = document.createElement("p");
     document.body.appendChild(feedback);
