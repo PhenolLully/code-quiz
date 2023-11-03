@@ -68,7 +68,7 @@ function displayQuestion(questionIndex){
         var answerText = holdQuestion[questionIndex].answers[i];
         answerItem.textContent = answerText;
         answerItem.addEventListener("click", function () {
-          // Handle user's answer selection
+          
           if (correctAnswer){
             return;
           }
@@ -79,9 +79,9 @@ function displayQuestion(questionIndex){
           if (selectedAnswer === rightAnswer) {
             correctAnswer = true;
             feedback.textContent = "Correct!";
-            // Handle correct answer
+            
           } else {
-            // Handle incorrect answer
+            
             feedback.textContent = "Wrong!";
 
             count -= 5;
@@ -96,7 +96,7 @@ function displayQuestion(questionIndex){
 
           }
 
-          // Move to the next question
+          
           if (correctAnswer) {
             currentQuestion++;
             if (currentQuestion < holdQuestion.length) {
@@ -111,6 +111,7 @@ function displayQuestion(questionIndex){
         answers.appendChild(answerItem);
     }
 }
+
 
     var feedback = document.createElement("p");
     document.body.appendChild(feedback);

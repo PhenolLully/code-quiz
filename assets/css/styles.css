@@ -1,12 +1,12 @@
-/* Reset some default styles */
+
 body, h1, p {
     margin: 0;
     padding: 0;
   }
   
   body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #A7CCED;
     text-align: center;
     padding: 20px;
   }
@@ -19,7 +19,7 @@ body, h1, p {
   
   #timer {
     font-size: 20px;
-    color: #ff5733; /* Red color for the timer */
+    color: red; 
     margin-bottom: 10px;
   }
   
@@ -101,6 +101,6 @@ body, h1, p {
   }
   
   #submit-score:hover {
-    background-color: #0056b3;
+    background-color: #0C335D;
   }
   
