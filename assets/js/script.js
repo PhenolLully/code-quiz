@@ -56,7 +56,7 @@ function startGame(){
 
 function displayQuestion(questionIndex){
     if (questionIndex >= holdQuestion.length){
-        gameover();
+        
         return;
     }
     question.textContent = holdQuestion[questionIndex].question;
@@ -91,7 +91,7 @@ function displayQuestion(questionIndex){
             timer.textContent = "Time: " + count;
 
             if(count <= 0){
-                gameover();
+                
             }
 
           }
@@ -103,7 +103,7 @@ function displayQuestion(questionIndex){
               displayQuestion(currentQuestion);
             } else {
               feedback.textContent = "Quiz Is Over";
-              gameover();
+              alert("Quiz Is Over!");
             }
           }
         });
