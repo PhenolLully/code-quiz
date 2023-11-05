@@ -1,5 +1,34 @@
 # 04 Web APIs: Code Quiz
 
+## Description
+
+Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+
+What was your motivation?
+My motivation was to utilize the skills and resources that I have learned in Javascript to build this project
+Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+I built this project in order to create my first functional coding quiz web browser
+What problem does it solve?
+The problem it solves is being able to build a functional site 
+What did you learn?
+I learned that coding is challenging but if you apply yourself, use resources and get help you will be fine!
+What makes your project stand out?
+My project stands out because my website is as functional as I could've made it.
+## Installation
+
+What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+
+First a github repository needs to be created make sure it has a README.md file, then clone the repository and paste it in your Week 4 folder. Then open the developer folder in the class repository and copy the material inside the folder into the repository folder. Then you can continue work on the assignment.
+
+## Usage
+
+Provide instructions and examples for use. Include screenshots as needed.
+
+To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+
+![GitHubScreenshot](./assets/images/GithubScreenshot.png)
+![Step2Screenshot](./assets/images/Step2.png)
+
 ## Your Task
 
 At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
