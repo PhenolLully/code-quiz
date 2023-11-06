@@ -30,7 +30,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 ![Step2Screenshot](./assets/images/Step2.png)
 
 ## Credits
-Charles Puente-Matos one of the Tutoring teachers assisted me on part of this assignment!
+CHARLES PUENTE-MATOS ONE OF THE TUTORING TEACHERS ASSISTED ME ON PART OF THIS ASSIGNMENT!
+I DID USE YOUTUBE AND OTHER SITES TO HELP ME IMPLEMENT AND COME TO AN UNDERSTANDING OF CODE THAT I AM USING!!!
 
 ## Your Task
 
