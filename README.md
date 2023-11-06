@@ -29,6 +29,9 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 ![GitHubScreenshot](./assets/images/GithubScreenshot.png)
 ![Step2Screenshot](./assets/images/Step2.png)
 
+## Credits
+Charles Puente-Matos one of the Tutoring teachers assisted me on part of this assignment!
+
 ## Your Task
 
 At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 

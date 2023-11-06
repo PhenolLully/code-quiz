@@ -4,7 +4,7 @@ var question = document.querySelector("#question")
 var answers = document.querySelector("#answers")
 var currentQuestion = 0;
 var startQuiz = document.querySelector("#start-quiz");
-var correctAnswer = false;
+var correctAnswer = true;
 
 var holdQuestion = [
 {
@@ -50,10 +50,6 @@ function myTimer(){
 }, 1000);
 }
 
-function startGame(){
-    displayQuestion(currentQuestion);
-}
-
 function displayQuestion(questionIndex){
     if (questionIndex >= holdQuestion.length){
         
@@ -61,7 +57,7 @@ function displayQuestion(questionIndex){
     }
     question.textContent = holdQuestion[questionIndex].question;
     answers.innerHTML = "";
-    correctAnswer = false;
+    correctAnswer = "";
 
     for (var i = 0; i < holdQuestion[questionIndex].answers.length; i++) {
         var answerItem = document.createElement("li");
@@ -85,16 +81,12 @@ function displayQuestion(questionIndex){
             feedback.textContent = "Wrong!";
 
             count -= 5;
-            if(count < 0){
+
+            if(count <= 0){
                 count = 0;
             }
             timer.textContent = "Time: " + count;
-
-            if(count <= 0){
-                
-            }
-
-          }
+        }
 
           
           if (correctAnswer) {
@@ -112,8 +104,11 @@ function displayQuestion(questionIndex){
     }
 }
 
+function startGame(){
+    displayQuestion(currentQuestion);
+}
 
-    var feedback = document.createElement("p");
-    document.body.appendChild(feedback);
+var feedback = document.createElement("p");
+document.body.appendChild(feedback);
 
     
